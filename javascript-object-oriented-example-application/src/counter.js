@@ -1,9 +1,16 @@
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
+export class counter {
+  constructor(number, currentCount){
+    this.number = number;
+    this.currentCount = currentCount
   }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
+
+  getCount(){
+    return this.currentCount
+  }
+
+  setCount(number){
+    this.currentCount = number
+    return this.currentCount
+  }
 }
+
