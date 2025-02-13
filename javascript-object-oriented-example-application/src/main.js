@@ -1,10 +1,14 @@
 import './style.css'
-import { counter } from './counter.js'
+import {character, hunter} from './characters.js'
 
-document.querySelector('#app').innerHTML = `<div className='counter'> </ div>`
+document.querySelector('#app').innerHTML = `<div'> </ div>`
 
-const count = new counter(17, 500)
+const newestHunter = new hunter('solar', ['solar'])
+console.log('create new hunter', newestHunter)
+newestHunter.setCharacterType = 'hunter'
 
-console.log('this is the count object ', count);
-console.log('this is the current count ',count.getCount)
-console.log('update the count', count.setCount(777))
+// create a visualization for the hunter subclass
+// what we want to see?
+// type of character with their logo:
+// active super ability
+// available super abilities
